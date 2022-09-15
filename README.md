@@ -1,2 +1,2 @@
 # otatechclass.github.io
-Test
+From Replit
