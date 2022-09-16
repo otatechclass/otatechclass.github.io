@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+.col{
+  float: left;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body{
+  background:#ffffff;
+  font-family:sans-serif;
+  background-image: url('https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress');
+  background-size: cover;
+}
+
+.container{
+  background:#fff4e0;
+  border:1px solid #999999;
+  padding:20px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+h1{
+  text-align:center;
+  font-size:60px;
+  margin-top:0;
+}
+
+#dice{
+  margin:20px 0 20px 0;
+}
+
+.dieHolder{
+  width: 20%;
+  text-align:center;
+}
+
+.die{
+  padding:10px;
+  margin:10px;
+  cursor: pointer;
+}
+
+#rollButton{
+  background:#C83E3E;
+  color:#ffffff;
+  border:0px;
+  display:block;
+  width:100%;
+  padding:10px 0 10px 0px;
+  margin:20px 0 20px 0;
+  font-size:20px;
+}
+
+#rollButton:hover{
+  background:#AF3333;
+  cursor:pointer;
+}
+
+.rollType{
+  width: 10%;
+  text-align:center;
+  font-weight:bold;
+}
+
+.diceCount{
+  width: 20%;
+  text-align:center;
+}
+
+.score{
+  width: 20%;
+  text-align:center;
+}
+
+#scoreCard{
+  border-top:3px double #000000;
+  padding-top:20px;
+  margin-top:60px;
+}
+
+#scoreCard > .row{
+  
+  padding:20px 0 20px 0;
+  border-bottom:1px solid #333;
+}
+
+.headerRow{
+  font-weight:bold;
+  font-size:1.25rem;
+}
+
+#grandTotalRow{
+  background:#C83E3E;
+  color:#ffffff;
+}
+
+#grandTotalLabel{
+  text-align:right;
+  font-weight:bold;
+  width:30%;
+  
+}
+
+#totalScore{
+  width:20%;
+  text-align:center;
+  font-weight:bold;
+  
+}

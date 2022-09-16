@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yahtzee!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./game.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Yahtzee!</h1>
+    <div id="dice" class="row">
+      <div id="die0" class="col dieHolder" onclick="toggleHold(0)">
+        <div class="die">
+          <img id="die0Image" src="/yahtzee/img/dice/dieWhite_border0.png">
+        </div>
+      </div>
+      <div id="die1" class="col dieHolder" onclick="toggleHold(1)">
+        <div class="die">
+          <img id="die1Image" src="/yahtzee/img/dice/dieWhite_border0.png">
+        </div>
+      </div>
+      <div id="die2" class="col dieHolder" onclick="toggleHold(2)">
+        <div class="die">
+          <img id="die2Image" src="/yahtzee/img/dice/dieWhite_border0.png">
+        </div>
+      </div>
+      <div id="die3" class="col dieHolder" onclick="toggleHold(3)">
+        <div class="die">
+          <img id="die3Image" src="/yahtzee/img/dice/dieWhite_border0.png">
+        </div>
+      </div>
+      <div id="die4" class="col dieHolder" onclick="toggleHold(4)">
+        <div class="die">
+          <img id="die4Image" src="/yahtzee/img/dice/dieWhite_border0.png">
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <button id="rollButton" onclick="roll();">Roll</button>
+    </div>
+
+    <div id="scoreCard">
+      <div class="row headerRow">
+        <div class="col rollType">&nbsp;</div>
+        <div class="col diceCount">Dice</div>
+        <div class="col score">Score</div>
+      </div>
+      <div class="row">
+        <div class="col rollType">Aces</div>
+        <div class="col diceCount" id="acesCount">0</div>
+        <div class="col score" id="acesScore">0</div>
+      </div>
+      <div class="row">
+        <div class="col rollType">Twos</div>
+        <div class="col diceCount" id="twosCount">0</div>
+        <div class="col score" id="twosScore">0</div>
+      </div>
+      <div class="row">
+        <div class="col rollType">Threes</div>
+        <div class="col diceCount" id="threesCount">0</div>
+        <div class="col score" id="threesScore">0</div>
+      </div>
+      <div class="row">
+        <div class="col rollType">Fours</div>
+        <div class="col diceCount" id="foursCount">0</div>
+        <div class="col score" id="foursScore">0</div>
+      </div>
+      <div class="row">
+        <div class="col rollType">Fives</div>
+        <div class="col diceCount" id="fivesCount">0</div>
+        <div class="col score" id="fivesScore">0</div>
+      </div>
+      <div class="row">
+        <div class="col rollType">Sixes</div>
+        <div class="col diceCount" id="sixesCount">0</div>
+        <div class="col score" id="sixesScore">0</div>
+      </div>
+      <div class="row" id="grandTotalRow">
+        <div class="col" id="grandTotalLabel">Grand Total:</div>
+        <div class="col" id="totalScore">0</div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
