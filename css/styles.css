@@ -2,6 +2,7 @@ body{
   padding:20px;
   font-family:sans-serif;
 }
+
 #pageTitle{
   text-align:center;
 }
@@ -16,6 +17,7 @@ body{
   padding:10px;
   text-decoration:none;
   color:#ff0000;
+  margin-bottom:40px;
 }
 
 #links > a:hover{
