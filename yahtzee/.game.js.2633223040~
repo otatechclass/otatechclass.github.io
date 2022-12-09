@@ -106,37 +106,27 @@ function resetRoll() {
 
 /******************************************
 GAME OVER
-  1. Display an alert to user with some message.
-  2. Reset the game board by calling the "newGame" function    
+  
+  // 1. Display an alert to user with some message.
+  // 2. Reset the game board by calling the "newGame" function    
 ******************************************/
 function gameOver(){
-  alert("Game Over! You your score is " + gameScore + ". Good job!");
-  newGame();
+  function check() {
+  if () {
+    alert("CORRECT!");
+  }
 }
+}
+
 
 /******************************************
 NEW GAME
-  - Reset gameScore to 0
-  - Reset timesRolled to 0
-  - Reset dice images
-  - Reset the UI for each score group
 ******************************************/
 function newGame(){
-
-  document.getElementById("1Count").innerHTML = '<button onclick="assign(1)">Assign</button>';
-  document.getElementById("2Count").innerHTML = '<button onclick="assign(2)">Assign</button>';
-  document.getElementById("3Count").innerHTML = '<button onclick="assign(3)">Assign</button>';
-  document.getElementById("4Count").innerHTML = '<button onclick="assign(4)">Assign</button>';
-  document.getElementById("5Count").innerHTML = '<button onclick="assign(5)">Assign</button>';
-  document.getElementById("6Count").innerHTML = '<button onclick="assign(6)">Assign</button>';
-
-  document.getElementById("1Score").innerHTML = 0;
-  document.getElementById("2Score").innerHTML = 0;
-  document.getElementById("3Score").innerHTML = 0;
-  document.getElementById("4Score").innerHTML = 0;
-  document.getElementById("5Score").innerHTML = 0;
-  document.getElementById("6Score").innerHTML = 0;
-  
+  // - Reset gameScore to 0
+  // - Reset timesRolled to 0
+  // - Reset dice images
+  // - Reset the UI for each score group
 }
 
 

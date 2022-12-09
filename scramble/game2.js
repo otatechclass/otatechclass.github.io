@@ -43,7 +43,9 @@
     - The UI is BORING! It needs styling and images 
 *********************************************************************/
 
-let selectedWord="";
+let selectedWord = "";
+let isGameOver = false;
+let unscrambles = 0;
 
 // Our master array of Halloween words.  Note how it is declared as a CONST. Thats because we dont want anything changing these values
 const allWords = ["Costumes", "Monster", "Disguise", "Ghost", "Witch", "Pumpkin", "Candle", "Zombie", "Frankenstein", "October", "Scarecrow", "Pirate", "Crow", "Cat", "Broomstick", "Vampire", "Prince", "Princess", "Candy", "Werewolf", "Mask", "Spell", "Goblin", "Ghoul", "Alien", "Mummy", "Spooky", "Creepy", "Slimy", "Fangs", "Blood", "Skeleton", "Graveyard", "Party", "Screaming", "Bats", "Skull", "Wicked", "Scary"];
@@ -51,7 +53,7 @@ const allWords = ["Costumes", "Monster", "Disguise", "Ghost", "Witch", "Pumpkin"
 
 //Select a random word from the "allWords" array and assign it to a variable called "selectedWord"
 let randomIndex = Math.floor(Math.random() * (allWords.length - 1)); //Don't worry about this math, but it will select a random number between 0 and the last index of the allWords array.
-selectedWord = allWords[randomIndex]; // Use that random index in allWords and set that to a new variable that will hold our selectedWord.
+selectedWord = allWords[randomIndex].toLowerCase(); // Use that random index in allWords and set that to a new variable that will hold our selectedWord.
 
 
 //Scramble the selectedWord and display it inside of a div called "scrambledWord"
@@ -67,14 +69,23 @@ function nextWord() { }
 
 // This function is called when the user clicks on the "Check" button.
 function check() {
-  if (selectedWord === document.getElementById("myWord").value) {
+  if (selectedWord === document.getElementById("myWord").value.toLowerCase()) {
     alert("CORRECT!");
+    unscrambles++;
+  }else{
+    gameOver();
   }
 }
 
 //This function gets called when the user clicks on the "Give Up" button.
 function giveUp() {
   document.getElementById("myWord").value = selectedWord;
+  gameOver();
+}
+
+function gameOver(){
+  isGameOver = true;
+  alert("Game Over! You unscrambled " + unscrambles + " word");
 }
 
 //nextWord();
